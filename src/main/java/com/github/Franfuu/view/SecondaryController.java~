@@ -1,6 +1,8 @@
-package com.github.Franfuu;
+package com.github.Franfuu.view;
 
 import java.io.IOException;
+
+import com.github.Franfuu.view.App;
 import javafx.fxml.FXML;
 
 public class SecondaryController {
