@@ -22,7 +22,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         View view = AppController.loadFXML(Scenes.ROOT);
-        scene = new Scene(view.scene,  800, 518);
+        scene = new Scene(view.scene,  600, 400);
         currentController = (AppController) view.controller;
         currentController.onOpen( null);
         stage.setScene(scene);

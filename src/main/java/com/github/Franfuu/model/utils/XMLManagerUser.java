@@ -1,5 +1,5 @@
 package com.github.Franfuu.model.utils;
-
+import com.github.Franfuu.model.entity.User;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -7,16 +7,17 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
-public class XMLManager {
-    public static <T> boolean writeXML(T c, String filename) {
+public class XMLManagerUser {
+
+    public static boolean writeXML(User u, String fileName) {
         boolean result = false;
         JAXBContext context;
         try {
-            context = JAXBContext.newInstance(c.getClass());
+            context = JAXBContext.newInstance(u.getClass());
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-            m.marshal(c, new File(filename));
+            m.marshal(u, new File(fileName));
             result = true;
         } catch (JAXBException e) {
             e.printStackTrace(); //mode development
@@ -24,16 +25,17 @@ public class XMLManager {
         return result;
     }
 
-    public static <T> T readXML(T c, String filename) {
-        T result = c;
+    public static User readXML(User u, String filename) {
+        User result = u;
         JAXBContext context;
         try {
-            context = JAXBContext.newInstance(c.getClass());
+            context = JAXBContext.newInstance(u.getClass());
             Unmarshaller um = context.createUnmarshaller();
-            result = (T) um.unmarshal(new File(filename));
+            result = (User) um.unmarshal(new File(filename));
         } catch (JAXBException e) {
             e.printStackTrace();
         }
         return result;
     }
+
 }
