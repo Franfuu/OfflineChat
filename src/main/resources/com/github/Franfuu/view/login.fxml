@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.github.Franfuu.view.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Franfuu.view.LoginController">
+   <children>
+      <Button layoutX="258.0" layoutY="278.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #228be6;" text="Log in" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="310.0" layoutY="330.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Register" textFill="#228be6" underline="true" />
+      <Text layoutX="178.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dont have an account?" />
+      <Text fill="#228be6" layoutX="197.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In" wrappingWidth="203.4176025390625">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Text>
+      <TextField layoutX="150.0" layoutY="149.0" prefHeight="50.0" prefWidth="300.0" promptText="Email: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="149.0" layoutY="216.0" prefHeight="50.0" prefWidth="300.0" promptText="Password: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+   </children>
 </AnchorPane>
