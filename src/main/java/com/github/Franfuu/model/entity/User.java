@@ -1,20 +1,31 @@
 package com.github.Franfuu.model.entity;
 
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
-private String Name;
-private String Surname;
-private String Email;
-private int ID;
-private String Password;
+    // ATTRIBUTES
+    @XmlElement
+    private String Name;
+    @XmlElement
+    private String Surname;
+    @XmlElement
+    private String Email;
+    @XmlElement
+    private String Password;
 
-    public User(String name, String surname, String email, int ID, String password) {
-        Name = name;
-        Surname = surname;
-        Email = email;
-        this.ID = ID;
-        Password = password;
+
+    // CONSTRUCTORS
+    public User(String name, String surname, String email, String password) {
+        this.Name = name;
+        this.Surname = surname;
+        this.Email = email;
+        this.Password = password;
     }
 
     public User() {
@@ -33,33 +44,25 @@ private String Password;
         return Email;
     }
 
-    public int getID() {
-        return ID;
-    }
-
     public String getPassword() {
         return Password;
     }
 
     // SETTERS
     public void setName(String name) {
-        Name = name;
+        this.Name = name;
     }
 
     public void setSurname(String surname) {
-        Surname = surname;
+        this.Surname = surname;
     }
 
     public void setEmail(String email) {
-        Email = email;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
+        this.Email = email;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.Password = password;
     }
 
     @Override
@@ -68,8 +71,8 @@ private String Password;
                 "Name='" + Name + '\'' +
                 ", Surname='" + Surname + '\'' +
                 ", Email='" + Email + '\'' +
-                ", ID=" + ID +
                 ", Password='" + Password + '\'' +
                 '}';
     }
+
 }
