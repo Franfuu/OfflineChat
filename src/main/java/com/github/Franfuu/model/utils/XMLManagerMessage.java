@@ -25,7 +25,7 @@ public class XMLManagerMessage {
             return result;
         }
 
-        public static Message readXML(User u, String filename) {
+        public static User readXML(User u, String filename) {
             User result = u;
             JAXBContext context;
             try {
