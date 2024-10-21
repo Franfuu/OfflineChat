@@ -6,4 +6,10 @@
         <Email>ads@gmail.com</Email>
         <Password>asdasd</Password>
     </user>
+    <user>
+        <Name>JUAN</Name>
+        <Surname>ANTONIO</Surname>
+        <Email>puta@gmail.com</Email>
+        <Password>1234</Password>
+    </user>
 </userList>
