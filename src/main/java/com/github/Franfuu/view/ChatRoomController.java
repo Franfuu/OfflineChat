@@ -42,4 +42,13 @@ public class ChatRoomController extends Controller implements Initializable {
         alert.showAndWait();
     }
 
+
+    private void SortByName () {
+        // Funcion para ordenar la lista de usuarios por el nombre
+    }
+
+    private void SortByDate () {
+        // Funcion para ordenar la lista de usuarios por la fecha del ultimo mensaje
+    }
+
 }
