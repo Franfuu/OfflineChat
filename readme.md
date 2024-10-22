@@ -2,7 +2,7 @@
 
 ___
 
-_Este pryecto está realizador por [Franfuu](https://github.com/Franfuu) y [JuanMa748](https://github.com/JuanManuel748)._
+_Este proyecto está realizador por [Franfuu](https://github.com/Franfuu) y [JuanMa748](https://github.com/JuanManuel748)._
 ## Descripción 📄
 
 ___

@@ -60,14 +60,9 @@ public class LoginController extends Controller implements Initializable {
                     showAlert(Alert.AlertType.ERROR, "Error correo no existe", "El correo no existe en el archivo xml.");
                 } else {
 
-
-
-
-
-
                     // Show success message and navigate to main page
-                    showAlert(Alert.AlertType.INFORMATION, "Cliente Logueado", "El cliente se ha registrado correctamente.");
-                    App.currentController.changeScene(Scenes.CHATROOM, null);
+                    showAlert(Alert.AlertType.INFORMATION, "Cliente Logueado", "El cliente se ha loqueado correctamente.");
+                    App.currentController.changeScene(Scenes.CHAT, null);
 
                 }
             }

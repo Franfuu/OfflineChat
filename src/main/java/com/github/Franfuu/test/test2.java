@@ -7,7 +7,7 @@ import com.github.Franfuu.model.utils.XMLManager;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.github.Franfuu.model.utils.XMLManager.writeXML;
+
 
 public class test2 {
     public static void main(String[] args) {

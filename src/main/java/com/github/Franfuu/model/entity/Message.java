@@ -78,13 +78,7 @@ public class Message {
     // toString method
     @Override
     public String toString() {
-        return "Message{" +
-                "sender=" + sender.getName() + " " + sender.getSurname() +
-                ", recipient=" + recipient.getName() + " " + recipient.getSurname() +
-                ", content='" + content + '\'' +
-                ", messageID=" + messageID +
-                ", date=" + date +
-                ", time=" + time +
-                '}';
+        String recipientName = (recipient != null) ? recipient.getName() : "Unknown";
+        return String.format("From: %s To: %s\n%s\n%s %s", sender.getName(), recipientName, content, date, time);
     }
 }
