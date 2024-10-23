@@ -1,0 +1,10 @@
+/* CSS DEL chat.fxml */
+
+.VBox {
+    -fx-background-color:  #228be6; /*Para que el color de fonde sea azul*/
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
