@@ -10,7 +10,8 @@ public class MessageList {
     private List<Message> messages;
 
     public MessageList() {
-        this.messages = new ArrayList<>();
+        MessageList_Singleton msgLS_ST = MessageList_Singleton.getInstance();
+        this.messages = msgLS_ST.getMessages();
     }
 
     @XmlElement

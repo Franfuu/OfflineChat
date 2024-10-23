@@ -4,6 +4,7 @@ import com.github.Franfuu.App;
 import com.github.Franfuu.model.entity.User;
 import com.github.Franfuu.model.entity.UserList;
 import com.github.Franfuu.model.utils.XMLManager;
+import com.github.Franfuu.view.WelcomeController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -85,7 +86,7 @@ public class RegisterController extends Controller implements Initializable {
                     // Create Client object and save to xml
                     User userTemp = new User(name, surname, email, password);
                     userContainer.add(userTemp);
-                    XMLManager.writeXML(userContainer, "UserData.xml");
+                    XMLManager.writeXML(userContainer, WelcomeController.userXML);
 
                     // Show success message and navigate to main page
                     showAlert(Alert.AlertType.INFORMATION, "Cliente Registrado", "El cliente se ha registrado correctamente.");

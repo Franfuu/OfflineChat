@@ -1,24 +1,39 @@
 package com.github.Franfuu.model.entity;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Message {
+    @XmlElement
     private User sender;
+    @XmlElement
     private User recipient;
+    @XmlElement
     private String content;
+    @XmlElement
     private int messageID;
+    @XmlElement
     private LocalDate date;   // Date attribute
+    @XmlElement
     private LocalTime time;   // Time attribute
 
     // Full constructor
-    public Message(User sender, User recipient, String content, int messageID, LocalDate date, LocalTime time) {
+    public Message(User sender, User recipient, String content, int messageID) {
         this.sender = sender;
         this.recipient = recipient;
         this.content = content;
         this.messageID = messageID;
-        this.date = date;
-        this.time = time;
+        LocalDate Dnow = LocalDate.now();
+        this.date = LocalDate.parse(Dnow.format(DateTimeFormatter.ISO_DATE));
+        LocalTime Tnow = LocalTime.now();
+        this.time = LocalTime.parse(Tnow.format(DateTimeFormatter.ofPattern("HH:mm")));
     }
 
     // Empty constructor

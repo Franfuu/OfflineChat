@@ -15,6 +15,9 @@ public class WelcomeController extends Controller implements Initializable {
     @FXML
     private Button adminWayButton;
 
+    public static final String userXML = "src/main/resources/XML/UserData.xml";
+    public static final String messageXML = "src/main/resources/XML/Messages.xml";
+
     @Override
     public void onOpen(Object input) throws Exception {
 

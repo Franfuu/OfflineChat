@@ -30,6 +30,8 @@ public class LoginController extends Controller implements Initializable {
 
     private static UserList userContainer = new UserList();
 
+    protected static User Sender = new User();
+
     @Override
     public void onOpen(Object input) throws Exception {
 
@@ -60,6 +62,13 @@ public class LoginController extends Controller implements Initializable {
                     showAlert(Alert.AlertType.ERROR, "Error correo no existe", "El correo no existe en el archivo xml.");
                 } else {
 
+                    for(User u: userContainer.getUsers()) {
+                        if (u.getEmail().equals(email)) {
+                            if (u.getPassword().equals(password)) {
+                                Sender = u;
+                            }
+                        }
+                    }
                     // Show success message and navigate to main page
                     showAlert(Alert.AlertType.INFORMATION, "Cliente Logueado", "El cliente se ha loqueado correctamente.");
                     App.currentController.changeScene(Scenes.CHAT, null);

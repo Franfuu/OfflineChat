@@ -1,11 +1,14 @@
 package com.github.Franfuu.view;
 
 import com.github.Franfuu.App;
+import com.github.Franfuu.model.entity.User;
+import com.github.Franfuu.model.entity.UserList_Singleton;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ChatRoomController extends Controller implements Initializable {
@@ -44,11 +47,16 @@ public class ChatRoomController extends Controller implements Initializable {
 
 
     private void SortByName () {
-        // Funcion para ordenar la lista de usuarios por el nombre
+        // Función para ordenar la lista de usuarios por el nombre
     }
 
     private void SortByDate () {
-        // Funcion para ordenar la lista de usuarios por la fecha del ultimo mensaje
+        // Funcion para ordenar la lista de usuarios por la fecha del último mensaje
+    }
+
+    private void printAllUsers() {
+        List <User> userList = UserList_Singleton.getInstance().getUsers();
+
     }
 
 }
