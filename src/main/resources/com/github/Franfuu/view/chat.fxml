@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Franfuu.view.ChatController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="ChatStyles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Franfuu.view.ChatController">
     <children>
-          <TextField fx:id="messageField" layoutX="15.0" layoutY="356.0" prefHeight="25.0" prefWidth="218.0" promptText="Ingresa su mensaje" />
-          <Button layoutX="271.0" layoutY="356.0" onAction="#handleSendMessage" text="Enviar" />
-         <ScrollPane layoutX="10.0" layoutY="74.0" prefHeight="201.0" prefWidth="580.0">
+          <TextField fx:id="messageField" layoutX="20.0" layoutY="300.0" prefHeight="40.0" prefWidth="400.0" promptText="Ingresa su mensaje" />
+          <Button layoutX="450.0" layoutY="300.0" onAction="#handleSendMessage" text="Enviar" />
+         <ScrollPane layoutX="20.0" layoutY="50.0" prefHeight="226.0" prefWidth="550.0">
              <content>
                  <VBox fx:id="messageContainer" spacing="10.0" />
              </content>
