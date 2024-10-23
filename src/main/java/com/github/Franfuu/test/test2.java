@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
+/*
+*  NO FUNCIONA
+*/
 public class test2 {
     public static void main(String[] args) {
         User andrea = new User("Anadre", "Roldan", "ads@gmail.com", "asdasd");

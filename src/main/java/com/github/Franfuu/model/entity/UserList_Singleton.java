@@ -1,6 +1,7 @@
 package com.github.Franfuu.model.entity;
 
 import com.github.Franfuu.model.utils.XMLManager;
+import com.github.Franfuu.view.WelcomeController;
 
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UserList_Singleton implements Serializable {
     private static final long serialVersionUID=1L;
-    private static final String FILENAME ="UserData.xml";
+    private static final String FILENAME = WelcomeController.userXML;
     private static UserList_Singleton _instance;
 
     @XmlElement(name="user")

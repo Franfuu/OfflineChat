@@ -2,6 +2,7 @@ module com.github.Franfuu {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.xml.bind;
+    requires java.desktop;
 
     opens com.github.Franfuu.model.entity to java.xml.bind;
 
